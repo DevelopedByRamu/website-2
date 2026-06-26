@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ancient Egypt Scroll Experience</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio
+      id="pageAudio"
+      loop
+      src="audio/smstudios93-5ancient-egypt-502872.mp3"
+    ></audio>
+    <button class="audio-toggle" id="audioToggle" aria-label="Turn audio on">
+      <span class="audio-icon">🔇</span>
+    </button>
+    <main id="mainSite">
+      <section class="section hero visible" id="hero">
+        <img src="img/pyramid.png" alt="Desert landscape" />
+        <div class="hero-overlay">
+          <div class="hero-copy">
+            <div class="eyebrow">Ancient Egypt</div>
+            <h1>Encyclopedia of Ancient Egypt</h1>
+            <p>
+              Enter a vivid archive of pharaohs, temples, myths, and ancient art
+              designed for discovery.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pharaoh-section">
+        <div class="panel">
+          <div class="copy">
+            <div class="eyebrow">Ancient Egypt Collection</div>
+            <h1>The Pharaoh</h1>
+            <p>
+              Step into the power and ceremony of Ancient Egypt through a visual
+              exploration of the Pharaoh. This section introduces the ruler as a
+              political, military, and sacred figure whose image shaped an
+              empire.
+            </p>
+            <div class="cta-row">
+              <button class="btn" id="openPharaohTriptych">See Pharaoh</button>
+            </div>
+          </div>
+          <div class="art-frame">
+            <img src="img/PGAROAH-BLINK.gif" alt="Pharaoh illustration" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="throne-room-section">
+        <div class="throne-room-wrapper">
+          <h2>Pharaoh's Throne Room</h2>
+          <p style="margin: 0 auto">
+            A ceremonial interior inspired by royal architecture, columns, and
+            the elevated throne used to frame authority, ritual, and spectacle.
+          </p>
+          <video
+            src="img/throne room video.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls="false"
+            aria-label="Pharaoh throne room video"
+          ></video>
+        </div>
+      </section>
+
+      <section class="section" id="encyclopaedia-section">
+        <div class="book-showcase">
+          <div class="copy">
+            <div class="eyebrow">Book Collection</div>
+            <h2>Encyclopaedia of Ancient Egypt</h2>
+            <p>
+              This volume presents an accessible overview of Ancient Egyptian
+              life, kingship, belief systems, architecture, writing, burial
+              customs, mythology, and art. It is designed as a visual reference
+              with rich illustrations and concise explanatory text.
+            </p>
+            <div class="cta-row">
+              <button class="btn">Buy Book</button>
+            </div>
+            <p class="book-caption">
+              Click the book image to rotate through front, side, back, and open
+              views.
+            </p>
+          </div>
+          <div class="book-image-wrap">
+            <img
+              id="bookImage"
+              class="book-image"
+              src="img/Book cover_Mockup.jpg.jpeg"
+              alt="Encyclopaedia of Ancient Egypt book"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="posters-section">
+        <div class="centered">
+          <h2>Posters</h2>
+          <p style="margin: 0 auto">
+            A curated triptych of poster designs inspired by Egyptian history,
+            archaeology, and museum-style print culture.
+          </p>
+
+          <div class="triptych-grid">
+            <img
+              src="img/poster 1.jpg"
+              alt="Egypt and Monuments poster"
+              data-target="poster1-detail"
+            />
+            <img
+              src="img/poster 2.jpg"
+              alt="Egyptian Visual Archive poster"
+              data-target="poster2-detail"
+            />
+            <img
+              src="img/poster 3.jpg"
+              alt="L'Egypte Antique poster"
+              data-target="poster3-detail"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="detail-view" id="pharaoh-triptych-view">
+      <div class="centered">
+        <button class="back-btn" data-back-to="pharaoh-section">Back</button>
+        <h2>The Pharaoh Collection</h2>
+        <p style="margin: 0 auto">
+          Explore three different depictions of pharaonic identity. Click any
+          image to open a dedicated page with more information.
+        </p>
+
+        <div class="triptych-grid">
+          <div
+            class="triptych-card pharaoh-card"
+            data-target="pharaoh-detail-1"
+          >
+            <img
+              src="img/Pharaoh partial front.png"
+              alt="Pharaoh standing with spear and shield"
+            />
+            <h3>Warrior Pharaoh</h3>
+            <p>
+              This view shows the pharaoh as a warrior leader, armed for victory
+              and protection.
+            </p>
+          </div>
+
+          <div
+            class="triptych-card pharaoh-card"
+            data-target="pharaoh-detail-2"
+          >
+            <img
+              src="img/Pharaoh front facing view.png"
+              alt="Seated or draped pharaoh portrait"
+            />
+            <h3>Front Facing</h3>
+            <p>
+              This frontal view highlights the pharaoh’s regal bearing and
+              divine authority.
+            </p>
+          </div>
+
+          <div
+            class="triptych-card pharaoh-card"
+            data-target="pharaoh-detail-3"
+          >
+            <img
+              src="img/Pharaoh side view.png"
+              alt="Pharaoh with staff and royal attire"
+            />
+            <h3>Side View</h3>
+            <p>
+              This profile emphasizes the pharaoh’s ceremonial presence and
+              ritual role.
+            </p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <button class="btn" id="openDynamicPoses">Dynamic Poses</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="pharaoh-detail-1">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="pharaoh-triptych-view">
+            Back
+          </button>
+          <h2>Warrior Pharaoh</h2>
+          <p>
+            This image presents the Pharaoh as a military leader, equipped with
+            weapons and iconography associated with protection and command. The
+            pose, stance, and regalia suggest royal authority expressed through
+            discipline, conquest, and symbolic guardianship of the kingdom.
+          </p>
+        </div>
+        <div>
+          <img src="img/Pharaoh partial front.png" alt="Warrior Pharaoh" />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="pharaoh-detail-2">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="pharaoh-triptych-view">
+            Back
+          </button>
+          <h2>Regal Pharaoh</h2>
+          <p>
+            This portrait centers the ceremonial majesty of the ruler. Rich
+            textiles, formal posture, and traditional adornment evoke the
+            Pharaoh as both king and divine intermediary, projecting permanence,
+            order, and dynastic prestige.
+          </p>
+        </div>
+        <div>
+          <img src="img/Pharaoh front facing view.png" alt="Regal Pharaoh" />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="pharaoh-detail-3">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="pharaoh-triptych-view">
+            Back
+          </button>
+          <h2>Ceremonial Pharaoh</h2>
+          <p>
+            This depiction emphasizes ritual performance and sacred presence.
+            The staff, dress, and carefully staged body language align the
+            Pharaoh with temple culture, seasonal ceremony, and the visual
+            language of divine rule.
+          </p>
+        </div>
+        <div>
+          <img src="img/Pharaoh side view.png" alt="Ceremonial Pharaoh" />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="dynamic-poses">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="pharaoh-triptych-view">
+            Back
+          </button>
+          <h2>Dynamic Poses</h2>
+          <p>
+            A diptych presentation of two pharaonic gestures, showing the
+            contrast between ceremonial form and expressive motion in a way that
+            mirrors the existing detail-view image layout.
+          </p>
+        </div>
+        <div class="diptych-grid">
+          <img src="img/Dynamic Pose 1.png" alt="Dynamic Pose one" />
+          <img src="img/Dynamic Pose 2.png" alt="Dynamic Pose two" />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="poster1-detail">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="posters-section">Back</button>
+          <h2>Egypt and Monuments</h2>
+          <p>
+            A poster inspired by exhibition graphics and heritage print design.
+            Its warm palette and centered typography reference archival
+            publishing while foregrounding Egypt's architectural legacy.
+          </p>
+        </div>
+        <div>
+          <img src="img/poster 1.jpg" alt="Egypt and Monuments poster" />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="poster2-detail">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="posters-section">Back</button>
+          <h2>Egyptian Visual Archive</h2>
+          <p>
+            This poster draws from printed ephemera, museum labels, and
+            text-driven compositions. It balances historic tone with a
+            structured editorial layout.
+          </p>
+        </div>
+        <div>
+          <img src="img/poster 2.jpg" alt="Egyptian Visual Archive poster" />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="poster3-detail">
+      <div class="detail-layout">
+        <div>
+          <button class="back-btn" data-back-to="posters-section">Back</button>
+          <h2>L'Egypte Antique</h2>
+          <p>
+            A vivid poster composition featuring a sculptural portrait against a
+            patterned field. The design highlights contrast, texture, and a more
+            art-led interpretation of Ancient Egyptian imagery.
+          </p>
+        </div>
+        <div>
+          <img src="img/poster 3.jpg" alt="L'Egypte Antique poster" />
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
