@@ -82,7 +82,7 @@
               with rich illustrations and concise explanatory text.
             </p>
             <div class="cta-row">
-              <button class="btn">Buy Book</button>
+              <button class="btn" id="openBuyBook">Buy Book</button>
             </div>
             <p class="book-caption">
               Click the book image to rotate through front, side, back, and open
@@ -93,7 +93,7 @@
             <img
               id="bookImage"
               class="book-image"
-              src="img/Book cover_Mockup.jpg.jpeg"
+              src="img/Thick_Book_Mockup_7.png"
               alt="Encyclopaedia of Ancient Egypt book"
             />
           </div>
@@ -110,17 +110,17 @@
 
           <div class="triptych-grid">
             <img
-              src="img/poster 1.jpg"
+              src="img/Artboard 3.png"
               alt="Egypt and Monuments poster"
               data-target="poster1-detail"
             />
             <img
-              src="img/poster 2.jpg"
+              src="img/Artboard 2.png"
               alt="Egyptian Visual Archive poster"
               data-target="poster2-detail"
             />
             <img
-              src="img/poster 3.jpg"
+              src="img/Artboard 1.png"
               alt="L'Egypte Antique poster"
               data-target="poster3-detail"
             />
@@ -251,11 +251,13 @@
     </section>
 
     <section class="detail-view" id="dynamic-poses">
+      <div class="detail-backbar">
+        <button class="back-btn" data-back-to="pharaoh-triptych-view">
+          Back
+        </button>
+      </div>
       <div class="detail-layout">
         <div>
-          <button class="back-btn" data-back-to="pharaoh-triptych-view">
-            Back
-          </button>
           <h2>Dynamic Poses</h2>
           <p>
             A diptych presentation of two pharaonic gestures, showing the
@@ -266,6 +268,88 @@
         <div class="diptych-grid">
           <img src="img/Dynamic Pose 1.png" alt="Dynamic Pose one" />
           <img src="img/Dynamic Pose 2.png" alt="Dynamic Pose two" />
+          <img
+            src="img/Dynamic Poses - Copy (3) (1).png"
+            alt="Dynamic Pose three"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-view" id="buy-book-page">
+      <div class="purchase-shell">
+        <div class="purchase-backbar">
+          <button class="back-btn" data-back-to="encyclopaedia-section">
+            Back
+          </button>
+        </div>
+        <div class="purchase-layout">
+          <div class="purchase-card">
+            <div class="eyebrow">Book Catalog</div>
+            <h2>Encyclopaedia of Ancient Egypt</h2>
+            <p>
+              A richly illustrated reference volume featuring Egypt’s rulers,
+              rituals, architecture, myths, and visual culture in a clear and
+              accessible format.
+            </p>
+            <ul class="book-catalog">
+              <li>Overview of dynasties, tombs, and temples</li>
+              <li>Illustrated studies of gods, symbols, and art</li>
+              <li>Accessible essays on daily life and burial customs</li>
+            </ul>
+            <div class="price-row">
+              <span class="price-label">Price</span>
+              <span class="price-value">R399.99</span>
+            </div>
+          </div>
+
+          <div class="purchase-card checkout-card">
+            <h3>Checkout</h3>
+            <div class="quantity-row">
+              <button
+                class="qty-btn"
+                id="decreaseQty"
+                aria-label="Decrease quantity"
+              >
+                −
+              </button>
+              <span id="quantityValue">1</span>
+              <button
+                class="qty-btn"
+                id="increaseQty"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+
+            <label class="email-field" for="buyerEmail">
+              <span>Email</span>
+              <input
+                id="buyerEmail"
+                type="email"
+                placeholder="you@example.com"
+              />
+            </label>
+
+            <div class="checkout-summary">
+              <div>
+                <span>Copies</span>
+                <strong id="summaryQty">1</strong>
+              </div>
+              <div>
+                <span>Total</span>
+                <strong id="summaryPrice">R399.99</strong>
+              </div>
+            </div>
+
+            <button class="btn" id="checkoutBtn">Checkout</button>
+            <p
+              id="checkoutMessage"
+              class="checkout-message"
+              aria-live="polite"
+            ></p>
+          </div>
         </div>
       </div>
     </section>
@@ -282,7 +366,7 @@
           </p>
         </div>
         <div>
-          <img src="img/poster 1.jpg" alt="Egypt and Monuments poster" />
+          <img src="img/Artboard 3.png" alt="Egypt and Monuments poster" />
         </div>
       </div>
     </section>
@@ -299,7 +383,7 @@
           </p>
         </div>
         <div>
-          <img src="img/poster 2.jpg" alt="Egyptian Visual Archive poster" />
+          <img src="img/Artboard 2.png" alt="Egyptian Visual Archive poster" />
         </div>
       </div>
     </section>
@@ -316,7 +400,7 @@
           </p>
         </div>
         <div>
-          <img src="img/poster 3.jpg" alt="L'Egypte Antique poster" />
+          <img src="img/Artboard 1.png" alt="L'Egypte Antique poster" />
         </div>
       </div>
     </section>
